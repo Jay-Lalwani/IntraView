@@ -464,8 +464,7 @@ export function ConsolePage() {
     <div data-component="ConsolePage">
       <div className="content-top">
         <div className="content-title">
-          <img src="/openai-logomark.svg" alt="OpenAI Logo" />
-          <span>IntraView</span>
+          <img src="/logo.png" alt="IntraView Logo" />
         </div>
         <div className="content-api-key">
           {!LOCAL_RELAY_SERVER_URL && (
