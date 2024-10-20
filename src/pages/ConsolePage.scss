@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  margin: 0px 8px;
+  background-color: #20232b; // Dark background for the app
 
   & > div {
     flex-shrink: 0;
@@ -23,15 +23,19 @@
     // padding: 8px 16px;
     min-height: 40px;
 
+    .content-api-key{
+      background-color: white;
+      border-radius: 18px;
+    }
+
     .content-title {
       flex-grow: 1;
       display: flex;
       align-items: center;
-      // gap: 12px;
 
       img {
-        width: 316px;
-        height: 50px;
+        width: 455px;
+        height: 72px;
       }
     }
   }
@@ -56,10 +60,12 @@
         padding-top: 16px;
         padding-bottom: 4px;
         position: relative;
+        color: #ffffff; // White color for titles
+        font-size: 16px;
       }
 
       .content-block-body {
-        color: #6e6e7f;
+        color: #d1d5db; // Light gray text
         position: relative;
         flex-grow: 1;
         padding: 8px 0px;
@@ -100,12 +106,13 @@
           top: 16px;
           left: 16px;
           padding: 4px 16px;
-          background-color: #fff;
+          // background-color: #4f566b; // Soft dark color for the title background
           border-radius: 1000px;
           min-height: 32px;
           z-index: 9999;
           text-align: center;
           white-space: pre;
+          color: #ffffff; // White text for title
 
           &.bottom {
             top: auto;
@@ -119,15 +126,16 @@
         height: 250px;
         max-height: 250px;
         white-space: pre;
-        background-color: #ececf1;
+        background-color: #2c303a; // Slightly lighter background for KV section
 
         .content-block-body {
           padding: 16px;
           margin-top: 56px;
           overflow: auto;
+          color: #f5f5f5; // Off-white text color
         }
       }
-
+      
       & > div.code-editor {
         display: flex;
         flex-direction: column;
@@ -142,10 +150,9 @@
             padding-top: 60px;
             flex-grow: 1;
             overflow: hidden;
-            border: 2px solid blue; // Temporary border for visibility; remove later
-            background-color: #1e1e1e;
+            border: 2px solid #8c71e7; // Blue border for the Monaco editor
+            background-color: #1c1f26; // Darker background for Monaco editor
 
-            /* Ensure the Monaco Editor fills the container */
             .monaco-editor {
               height: 100% !important;
               width: 100% !important;
@@ -185,7 +192,7 @@
       }
 
       .events {
-        border-top: 1px solid #e7e7e7;
+        border-top: 1px solid #3e4551; // Soft border for event logs
       }
 
       .conversation {
@@ -195,8 +202,7 @@
         overflow: hidden;
         height: 200px;
         min-height: 0;
-        // max-height: 200px;
-        border-top: 1px solid #e7e7e7;
+        border-top: 1px solid #3e4551; // Soft border for conversation
       }
     }
 
@@ -214,15 +220,15 @@
         position: absolute;
         top: 0px;
         right: -20px;
-        background: #aaa;
-        color: #fff;
+        background: #d1d5db; // Lighter background for close button
+        color: #ffffff;
         display: flex;
         border-radius: 16px;
         padding: 2px;
         cursor: pointer;
 
         &:hover {
-          background: #696969;
+          background: #4b5563; // Darker hover background
         }
 
         svg {
@@ -241,16 +247,16 @@
         margin-right: 16px;
 
         &.user {
-          color: #0099ff;
+          color: #3b82f6; // Blue color for user text
         }
 
         &.assistant {
-          color: #009900;
+          color: #10b981; // Green color for assistant text
         }
       }
 
       .speaker-content {
-        color: #18181b;
+        color: #f9fafb; // Light text color for the conversation
         overflow: hidden;
         word-wrap: break-word;
       }
@@ -270,12 +276,13 @@
         width: 80px;
         flex-shrink: 0;
         margin-right: 16px;
+        color: #9ca3af; // Gray color for timestamps
       }
 
       .event-details {
         display: flex;
         flex-direction: column;
-        color: #18181b;
+        color: #e5e7eb; // Light color for event details
         gap: 8px;
 
         .event-summary {
@@ -284,7 +291,7 @@
 
           &:hover {
             border-radius: 8px;
-            background-color: #f0f0f0;
+            background-color: #374151; // Dark background on hover
           }
 
           cursor: pointer;
@@ -299,15 +306,15 @@
             gap: 8px;
 
             &.client {
-              color: #0099ff;
+              color: #3b82f6; // Blue for client events
             }
 
             &.server {
-              color: #009900;
+              color: #10b981; // Green for server events
             }
 
             &.error {
-              color: #990000;
+              color: #ef4444; // Red for errors
             }
 
             svg {
@@ -320,10 +327,11 @@
 
         .event-payload {
           pre {
-            background-color: #f5f5f5;
+            background-color: #374151; // Dark background for event payloads
             padding: 8px;
             border-radius: 4px;
             overflow: auto;
+            color: #f3f4f6; // Light text for payloads
           }
         }
       }
@@ -348,11 +356,11 @@
         gap: 4px;
 
         &.client {
-          color: #0099ff;
+          color: #3b82f6; // Blue for client visualization
         }
 
         &.server {
-          color: #009900;
+          color: #10b981; // Green for server visualization
         }
 
         canvas {
@@ -363,27 +371,32 @@
       }
     }
 
-    /* Monaco Editor Specific Styles */
-    .monaco-editor-container {
-      flex-grow: 1;
-      overflow: hidden;
-      border: 2px solid blue; // Temporary border for visibility; remove later
-      background-color: #1e1e1e;
-
-      .monaco-editor {
-        height: 100% !important;
-        width: 100% !important;
-      }
-    }
-
     .send-button {
       margin-top: 10px;
       align-self: flex-end;
+      background-color: #f59e0b;
+      color: #ffffff; // White text for the button
+
+      &:hover {
+        &.unsynced:hover {
+          background-color: darken(#f59e0b, 10%); // Darken the hover color for unsynced
+        }
+        &.synced:hover {
+          background-color: darken(#10b981, 10%); // Darken the hover color for synced
+        }
+      }
+      &.synced {
+        background-color: #10b981; // Green when synced
+      }
+    
+      &.unsynced {
+        background-color: #f59e0b; // Orange/yellow when unsynced
+      }
     }
+
 
     /* Adjust Send Button Styling */
     .send-button button {
-      /* Ensure the button inherits styles correctly */
       min-width: 100px;
     }
   }
