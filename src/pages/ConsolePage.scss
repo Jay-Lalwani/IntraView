@@ -103,9 +103,9 @@
           align-items: center;
           justify-content: center;
           line-height: 2em;
-          top: 16px;
+          top: 10px;
           left: 16px;
-          padding: 4px 16px;
+          padding: 5px 16px;
           // background-color: #4f566b; // Soft dark color for the title background
           border-radius: 1000px;
           min-height: 32px;
@@ -147,7 +147,6 @@
           flex-direction: column;
 
           .monaco-editor-container {
-            padding-top: 60px;
             flex-grow: 1;
             overflow: hidden;
             border: 2px solid #8c71e7; // Blue border for the Monaco editor
@@ -157,11 +156,6 @@
               height: 100% !important;
               width: 100% !important;
             }
-          }
-
-          .send-button {
-            margin-top: 10px;
-            align-self: flex-end;
           }
         }
       }
@@ -372,7 +366,7 @@
     }
 
     .send-button {
-      margin-top: 10px;
+      margin: 0 0 10px 0;
       align-self: flex-end;
       background-color: #f59e0b;
       color: #ffffff; // White text for the button

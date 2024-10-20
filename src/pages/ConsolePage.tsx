@@ -606,6 +606,10 @@ export function ConsolePage() {
           {/* Code Editor Block */}
           <div className="content-block code-editor">
             <div className="content-block-title">Code Editor</div>
+            <Button
+                label="Send Code"
+                onClick={sendCode}
+                className={`send-button ${lastSentCode === code ? 'synced' : 'unsynced'}`}/>
             <div className="content-block-body full">
               <div className="monaco-editor-container">
                 <Editor
@@ -620,10 +624,6 @@ export function ConsolePage() {
                   }}
                 />
               </div>
-              <Button
-                label="Send Code"
-                onClick={sendCode}
-                className={`send-button ${lastSentCode === code ? 'synced' : 'unsynced'}`}/>
             </div>
           </div>
 
