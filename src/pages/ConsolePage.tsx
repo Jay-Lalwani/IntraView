@@ -524,11 +524,17 @@ export function ConsolePage() {
             />
           </div>
           {/* Events Block */}
+  
+          
           <div className="content-block events">
+          
+          
+          {!isConnected ? ( 
+            <div className="config">
            <div className="content-block-title">Interview Configuration</div>
            <div className="content-block-body" data-events-content>
 
-              <div className="events">
+              
             {/* Programming Language (dropdown with python, java, c++, c, javascript, typescript, Ruby) */}
             <div className="event-item">
               <div className="event-item-title">Programming Language:</div>
@@ -591,9 +597,36 @@ export function ConsolePage() {
                 placeholder='(Optional)'
               />
               </div>
-              </div>
-            
+          </div>
             </div>
+            ) : ( 
+            <div className="feedback">
+              <div className="content-block-title">Interview Evaluation</div>
+              <div className="feedback-container">
+      
+                <div className="progress-bar">
+                <label htmlFor = "problem-solving">Problem-solving</label>
+                <progress id="problem-solving" value="2.5" max="5" />
+                </div>
+
+                <div className="progress-bar">
+                <label htmlFor = "communication">Communication</label>
+                <progress id="communication" value="3" max="5" />
+                </div>
+
+                <div className="progress-bar">
+                <label htmlFor = "code-quality">Code Quality</label>
+                <progress id="code-quality" value="4" max="5" />
+                </div>
+
+                <div className="progress-bar">
+                <label htmlFor = "time-management">Time Management</label>
+                <progress id="time-management" value="3" max="5" />
+                </div>
+              </div>
+            </div>
+            ) }
+
             <div className="visualization">
               <div className="visualization-entry client">
                 <canvas ref={clientCanvasRef} />
@@ -602,6 +635,7 @@ export function ConsolePage() {
                 <canvas ref={serverCanvasRef} />
               </div>
             </div>
+            
           </div>
 
           {/* Conversation Block */}

@@ -40,8 +40,32 @@
     }
   }
 
+  .feedback-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  progress {
+    width: 80%;
+    height: 30px;
+  }
+
+  .progress-bar { // progress bar and label container
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 8px 0px;
+  }
+
+  // label below the progress bar
+  label {
+    color: #ffffff; // White text for label
+    font-size: 14px;
+    font-weight: 500;
+  }
+
   .event-item {
-    // display: flex;
     align-items: center;
     gap: 8px;
     display: grid;
@@ -100,6 +124,8 @@
         position: relative;
         color: #ffffff; // White color for titles
         font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
       }
 
       .content-block-body {
