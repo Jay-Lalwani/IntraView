@@ -110,10 +110,10 @@ export function ConsolePage() {
   const [persona, setPersona] = useState('Friendly');
   const [customQuestion, setCustomQuestion] = useState('');
   const [feedback, setFeedback] = useState({
-    problemSolving: 0,
-    communication: 0,
-    codeQuality: 0,
-    timeManagement: 0
+    problemSolving: 2,
+    communication: 2,
+    codeQuality: 2,
+    timeManagement: 2
   });
 
   /**
@@ -166,10 +166,10 @@ export function ConsolePage() {
     setMemoryKv({});
     setCode('');
     setFeedback({ 
-      problemSolving: 0,
-      communication: 0,
-      codeQuality: 0,
-      timeManagement: 0
+      problemSolving: 2,
+      communication: 2,
+      codeQuality: 2,
+      timeManagement: 2
     });
 
     const interviewMessage = company.trim()
@@ -510,10 +510,10 @@ export function ConsolePage() {
           // get all of the text in between ``` and ``` and parse it as JSON
           const feedbackData = JSON.parse(item.formatted.transcript);
           setFeedback({
-            problemSolving: feedbackData.problemSolving || 0,
-            communication: feedbackData.communication || 0,
-            codeQuality: feedbackData.codeQuality || 0,
-            timeManagement: feedbackData.timeManagement || 0,
+            problemSolving: feedbackData.problemSolving || 2,
+            communication: feedbackData.communication || 2,
+            codeQuality: feedbackData.codeQuality || 2,
+            timeManagement: feedbackData.timeManagement || 2,
           });
         } catch (e) {
           console.error('Error parsing feedback:', e);
