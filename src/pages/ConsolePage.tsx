@@ -654,8 +654,9 @@ export function ConsolePage() {
           <div className="content-block conversation">
             <div className="content-block-title">Interview Transcript</div>
             <div className="content-block-body" data-conversation-content>
-              {!items.length && `Awaiting connection...`}
-              {items.map((conversationItem) => {
+              {items.length <= 1
+            ? `Awaiting connection...`
+            : items.slice(1).map((conversationItem) => {
                 return (
                   <div
                     className="conversation-item"
