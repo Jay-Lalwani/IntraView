@@ -40,6 +40,44 @@
     }
   }
 
+  .event-item {
+    // display: flex;
+    align-items: center;
+    gap: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .event-item-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    // background-color: #2c303a; // Slightly lighter background for event titles
+    color: #ffffff; // White text for event titles
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    margin: 8px 0px;
+    column-span: 3;
+  }
+
+  select {
+    background-color: #2c303a; // Slightly lighter background for select elements
+    color: #ffffff; // White text for select elements
+    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid #4f566b; // Soft border for select elements
+  }
+
+  input {
+    background-color: #2c303a; // Slightly lighter background for input elements
+    color: #ffffff; // White text for input elements
+    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid #4f566b; // Soft border for input elements
+  }
+
   .content-main {
     flex-grow: 1;
     flex-shrink: 1 !important;
