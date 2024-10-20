@@ -567,7 +567,7 @@ export function ConsolePage() {
             </div>
             {/* Mock Interview Persona (Friendly/Strict) */}
             <div className="event-item">
-              <div className="event-item-title">Mock Interview Persona:</div>
+              <div className="event-item-title">Persona:</div>
               <select
                 value={persona}
                 onChange={(e) => setPersona(e.target.value)}
