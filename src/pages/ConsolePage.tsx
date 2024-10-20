@@ -485,7 +485,6 @@ export function ConsolePage() {
       </div>
       <div className="content-main">
         <div className="content-logs">
-          {/* Events Block */}
           {/* Actions Block */}
           <div className="content-actions">
             <Toggle
@@ -515,6 +514,7 @@ export function ConsolePage() {
               }
             />
           </div>
+          {/* Events Block */}
           <div className="content-block events">
             <div className="visualization">
               <div className="visualization-entry client">
