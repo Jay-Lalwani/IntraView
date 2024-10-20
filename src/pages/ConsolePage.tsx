@@ -109,6 +109,12 @@ export function ConsolePage() {
   const [liveFeedback, setLiveFeedback] = useState('Live');
   const [persona, setPersona] = useState('Friendly');
   const [customQuestion, setCustomQuestion] = useState('');
+  const [feedback, setFeedback] = useState({
+    problemSolving: 0,
+    communication: 0,
+    codeQuality: 0,
+    timeManagement: 0
+  });
 
   /**
    * Utility for formatting the timing of logs
@@ -159,6 +165,12 @@ export function ConsolePage() {
     setItems(client.conversation.getItems());
     setMemoryKv({});
     setCode('');
+    setFeedback({ 
+      problemSolving: 0,
+      communication: 0,
+      codeQuality: 0,
+      timeManagement: 0
+    });
 
     const interviewMessage = company.trim()
     ? `You are a professional and experienced software engineer with a ${persona} personality conducting a technical coding interview with a candidate for ${company}.`
@@ -606,22 +618,22 @@ export function ConsolePage() {
       
                 <div className="progress-bar">
                 <label htmlFor = "problem-solving">Problem-solving</label>
-                <progress id="problem-solving" value="2.5" max="5" />
+                <progress id="problem-solving" value = {feedback.problemSolving} max="5" />
                 </div>
 
                 <div className="progress-bar">
                 <label htmlFor = "communication">Communication</label>
-                <progress id="communication" value="3" max="5" />
+                <progress id="communication" value= {feedback.communication} max="5" />
                 </div>
 
                 <div className="progress-bar">
                 <label htmlFor = "code-quality">Code Quality</label>
-                <progress id="code-quality" value="4" max="5" />
+                <progress id="code-quality" value= {feedback.codeQuality} max="5" />
                 </div>
 
                 <div className="progress-bar">
                 <label htmlFor = "time-management">Time Management</label>
-                <progress id="time-management" value="3" max="5" />
+                <progress id="time-management" value= {feedback.timeManagement} max="5" />
                 </div>
               </div>
             </div>
