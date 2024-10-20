@@ -389,8 +389,8 @@ export class WavRecorder {
    */
   getFrequencies(
     analysisType = 'frequency',
-    minDecibels = -100,
-    maxDecibels = -30,
+    minDecibels = -70,
+    maxDecibels = 0,
   ) {
     if (!this.processor) {
       throw new Error('Session ended: please call .begin() first');

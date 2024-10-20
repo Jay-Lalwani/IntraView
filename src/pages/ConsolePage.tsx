@@ -222,6 +222,9 @@ export function ConsolePage() {
   }, []);
 
   const deleteConversationItem = useCallback(async (id: string) => {
+    if (!isConnected) {
+      return;
+    }
     const client = clientRef.current;
     client.deleteItem(id);
   }, []);
@@ -472,6 +475,9 @@ export function ConsolePage() {
    * Send code to assistant
    */
   const sendCode = () => {
+    if (!isConnected) {
+      return;
+    }
     const client = clientRef.current;
     client.sendUserMessageContent([
       {
