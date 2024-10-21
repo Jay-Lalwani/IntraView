@@ -209,9 +209,9 @@ export function ConsolePage() {
   const disconnectConversation = useCallback(async () => {
     setIsConnected(false);
     // setRealtimeEvents([]);
-    // setItems([]);
+    setItems([]);
     // setMemoryKv({});
-    // setCode('');
+    setCode('');
 
     const client = clientRef.current;
     client.disconnect();
