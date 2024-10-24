@@ -172,7 +172,7 @@ export function ConsolePage() {
     });
 
     const interviewMessage = company
-    ? `You are a professional and experienced software engineer at ${company} with a ${persona} personality conducting a technical coding interview with a candidate.`
+    ? `You are a professional and experienced software engineer at ${company} with a ${persona} personality conducting a technical coding interview with a candidate for a position at ${company}.`
     : `You are a professional and experienced software engineer with a ${persona} personality conducting a technical coding interview with a candidate.`;
 
     // Connect to microphone
@@ -181,6 +181,8 @@ export function ConsolePage() {
     // Connect to audio output
     await wavStreamPlayer.connect();
     console.log("interviewMessage", interviewMessage);
+    console.log("customQuestion", customQuestion);
+    console.log("company", company);
     // Connect to realtime API
     // await client.connect();
     client.sendUserMessageContent([
@@ -200,7 +202,7 @@ export function ConsolePage() {
     if (client.getTurnDetectionType() === 'server_vad') {
       await wavRecorder.record((data) => client.appendInputAudio(data.mono));
     }
-  }, []);
+  }, [company, persona, customQuestion]);
 
   /**
    * Disconnect and reset conversation state
@@ -590,7 +592,7 @@ export function ConsolePage() {
               <div className="event-item-title">Programming Language:</div>
               <select
                 value={progLanguage}
-                onChange={(e) => setProgLanguage(e.target.value)}
+                onChange={(e) => setProgLanguage(e.target.value)} 
                 defaultValue = "python"
               >
                 <option value="python">Python</option>
