@@ -180,11 +180,9 @@ export function ConsolePage() {
 
     // Connect to audio output
     await wavStreamPlayer.connect();
-    console.log("interviewMessage", interviewMessage);
-    console.log("customQuestion", customQuestion);
-    console.log("company", company);
+
     // Connect to realtime API
-    // await client.connect();
+    await client.connect();
     client.sendUserMessageContent([
       {
         type: `input_text`,
