@@ -1,6 +1,6 @@
 # IntraView
 
-[DEMO](https://drive.google.com/file/d/11950GKLxOF3D2hNiIpPzqWnyXue--lK7/view)
+## [DEMO](https://drive.google.com/file/d/11950GKLxOF3D2hNiIpPzqWnyXue--lK7/view)
 
 ## Inspiration
 IntraView was inspired by the need to bridge the gap between theoretical coding knowledge and real-world technical interview skills. Many candidates struggle with coding interviews due to lack of practice, real-time feedback, and exposure to diverse problem types. Our goal was to create a platform where users could simulate realistic coding interviews in a controlled and customizable environment, helping them develop both technical and communication skills necessary for success.
