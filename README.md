@@ -1,5 +1,7 @@
 # IntraView
 
+Your Personalized AI-Powered Technical Interviewer: Simulate real-world coding interviews with tailored feedback to help you prepare for success.
+
 ## [DEMO](https://drive.google.com/file/d/11950GKLxOF3D2hNiIpPzqWnyXue--lK7/view)
 
 ## Inspiration
